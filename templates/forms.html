@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New People</title>
+</head>
+<body>
+
+<form  method="post" action="{% url 'handle' %}">
+    {% csrf_token %}
+        <input type="hidden" name="people_id" value="">
+     <label>
+        名字：
+        <input type="text" name="username" value=""/>
+        <br>
+    </label>
+    <label>
+        手机：
+        <input type="text" name="mobile" value=""/>
+        <br>
+    </label>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
